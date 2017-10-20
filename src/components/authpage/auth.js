@@ -11,23 +11,25 @@ export default class Auth extends Component{
 
     render(){
         return(
-            <div className='MainContainer' >
-                <div>
-                    <img src={logo} alt="logo"/>
-                </div>
-                <div>
-                    <h5>Username</h5>
-                    <input/>
-                    <h5>Password</h5>
-                    <input/>
-                </div>
-                <div>
-                    <Link to='/dashborad'> 
-                        <button className="button1" >Login</button>
-                    </Link>
-                    <Link to='/dashborad'> 
-                        <button className="button2" >Register</button>
-                    </Link>
+            <div className='center' >
+                <div className='MainContainer' >
+                    <div>
+                        <img className='auth-img' src={logo} alt="logo"/>
+                    </div>
+                    <div>
+                        <h5 className='auth-h5' >Username</h5>
+                        <input className='auth-input' />
+                        <h5 className='auth-h5' >Password</h5>
+                        <input className='auth-input' />
+                    </div>
+                    <div>
+                        <Link to='/dashboard'> 
+                            <button className="button1" >Login</button>
+                        </Link>
+                        <Link to='/dashboard'> 
+                            <button className="button2" >Register</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         )

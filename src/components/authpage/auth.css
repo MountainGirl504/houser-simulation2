@@ -8,7 +8,7 @@
     align-items: center;
     flex-direction: column;
 }
-input{
+.auth-input{
     width: 675px;
     height: 25px;
     font-size: 18px;
@@ -17,10 +17,10 @@ input{
     border:1px solid #519872;
 
 } 
-img {
+.auth-img {
     margin-bottom: 60px;
 }
-h5 {
+.auth-h5 {
     font-weight: bold;
     margin-left: 20px;
     letter-spacing: 1px;
@@ -43,4 +43,11 @@ h5 {
     color: white;   
     font-size: 15px;     
     font-weight: bold;     
+}
+.center {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
 }
