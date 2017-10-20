@@ -1,0 +1,33 @@
+.MainContainer {
+    height:100%;
+    width: 50vw;
+    min-width: 700px;
+    background-color: #F6F0F0;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.dash-btn{
+    font-weight: bold;
+    background: #8AEA92;
+    border: none;
+}
+.dash-filter{
+    display: flex;
+    border-bottom: 1px black solid;
+    padding-bottom: 20px;
+}
+.dash-add{
+    margin: 15px;
+    height: 30px;
+    width: 140px;
+}
+.dash-btn2{
+    font-weight: bold;
+    background: #3B5249;
+    border: none;
+    color: white;
+}
+.dash-underline{
+    border-bottom: 1px black solid;
+}
