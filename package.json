@@ -13,6 +13,7 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "massive": "^4.4.0",
+    "pg": "^7.3.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
