@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './dashboard.css'
 import Header from '../header/header'
+import { Link } from 'react-router-dom'
 
 
 
@@ -15,7 +16,9 @@ export default class Dashboard extends Component{
                 <div className='center' >
                     <div className='MainContainer'>
                         <div>
+                            <Link to='/step1' >
                             <button type='' className='dash-btn dash-add'>Add new property</button>
+                            </Link>
                         </div>
                         <div className='dash-filter' >
                             <h4>List properties with "desired rent" less than: $</h4>

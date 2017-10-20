@@ -1,0 +1,15 @@
+.MainContainer {
+    height:100%;
+    width: 50vw;
+    min-width: 700px;
+    background-color: #F6F0F0;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.step-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 90%;
+}
