@@ -1,0 +1,11 @@
+
+.MainContainer {
+    height: 1100px;
+    width: 50vw;
+    min-width: 700px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
