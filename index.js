@@ -24,12 +24,15 @@ massive(process.env.CONNECTION_STRING).then((db) => {
     console.log("DB connected")
     app.set('db', db);
 })
-
+//LISTINGS
 app.get('/api/listings', listingsControllers.getAll);
 app.get('/api/listings/:val', listingsControllers.filter );
 app.delete('/api/listings/:id', listingsControllers.delete);
 app.post('/api/listings', listingsControllers.create );
-
+//USERS
 app.post('/api/users', usersControllers.createUser );
+app.post('/api/users/login', usersControllers.login );
+
+
 
 app.listen(PORT, () => { console.log(`Server is listening on port: ${PORT}.`); });

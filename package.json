@@ -6,10 +6,7 @@
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
-<<<<<<< HEAD
-=======
     "dotenv": "^4.0.0",
->>>>>>> 2859a4f539e0cf0bc8274e64abf232f21559689e
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "massive": "^4.4.0",
