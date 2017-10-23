@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './auth.css'
 import logo from '../../assets/auth_logo.png'
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -10,11 +10,12 @@ export default class Auth extends Component{
         super()
 
         this.state = {
-            username: '',
-            password: '',
+            username: null,
+            password: null,
             userInput: '',
-            error: '',
+            loginError: '',
             loggedIn: false,
+            registerError: '',
             user: {}
         }
 
@@ -45,7 +46,7 @@ export default class Auth extends Component{
                })
             } else {
                 this.setState({
-                    error: response.data.error
+                    loginError: response.data.error
                 })
             }
         })
@@ -54,16 +55,21 @@ export default class Auth extends Component{
     register(){                 //aka create user on the back-end
         axios.post('http://localhost:7070/api/users', {username: this.state.username, password: this.state.password})
         .then (response => {
+            if(response.data.success){
             this.setState({
                 user: response.data.user,
                 loggedIn: true
             })
+        } else {
+            this.setState({
+                registerError: response.data.registerError
+            })
+        }
         })
     }
 
     render(){
         if (this.state.loggedIn) {
-            console.log('redirecting')
             return (
                 <Redirect to={'/dashboard'} />
             )
@@ -88,6 +94,7 @@ export default class Auth extends Component{
                         <button className="button2"
                             onClick = {this.register} >Register</button>
                         <p>{this.state.error}</p>
+                        <p>{this.state.registerError}</p>
                     </div>
                 </div>
             </div>

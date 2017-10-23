@@ -29,6 +29,7 @@ app.get('/api/listings', listingsControllers.getAll);
 app.get('/api/listings/:val', listingsControllers.filter );
 app.delete('/api/listings/:id', listingsControllers.delete);
 app.post('/api/listings', listingsControllers.create );
+
 //USERS
 app.post('/api/users', usersControllers.createUser );
 app.post('/api/users/login', usersControllers.login );

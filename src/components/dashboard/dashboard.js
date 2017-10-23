@@ -2,12 +2,27 @@ import React, {Component} from 'react'
 import './dashboard.css'
 import Header from '../header/header'
 import { Link } from 'react-router-dom'
-
-
+import axios from 'axios'
 
 
 export default class Dashboard extends Component{
+    constructor(){
+        super()
 
+        this.state = {
+            allListings: []
+        }
+    }
+
+componentWillMount(){
+    axios.get('http://localhost:7070/api/listings')
+    .then(response =>{
+        console.log(response)
+        this.setState({
+            allListings: response.data
+        })
+    })
+}
 
     render(){
         return(
@@ -25,7 +40,14 @@ export default class Dashboard extends Component{
                             <input type='number' className='' placeholder='0' />
                             <button type='' className='dash-btn'>Filter</button>
                             <button type='' className='dash-btn2'>Reset</button>
-                        </div> 
+                        </div>
+                        <div>
+                          {this.state.allListings.map((listing) => {
+                              return <div>
+                                <p>{listing.property_name}</p>
+                              </div>
+                          })}
+                        </div>
                     </div>
                 </div>
             </div>

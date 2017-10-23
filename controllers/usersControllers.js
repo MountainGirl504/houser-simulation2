@@ -4,8 +4,10 @@ module.exports = {
         const { username, password } = req.body;
 
         db.createUser([username, password])
-            .then((response) => res.status(200).send(response))
-            .catch((err) => console.log(err));
+            .then((response) => { console.log(response)
+                //res.status(200).send({success: 'You\'ve been registered!'})
+            })
+            .catch((err) => res.status(200).send({registerError:'This username is taken, try again!'}))
     },
 
     login: function (req, res, next) {
@@ -22,6 +24,6 @@ module.exports = {
                 res.status(200).send({error: "Log-in is invalid!"})
             }
         })
-        .catch((err) => res.status(500).send({error: "Something went wrong"}))
+        .catch((err) => res.status(500).send({err}))
     }
 }
