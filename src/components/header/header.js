@@ -9,7 +9,7 @@ export default class Header extends Component {
         <div className='header-container' >
             <div className='header-container2' >
                 <div className='yep' >
-                    <img src={headerLogo} alt='Header Logo' />
+                    <Link to='/dashboard'><img src={headerLogo} alt='Header Logo' /></Link>
                     <h1 className='header-font' >
                         <span className='header-span'>Houser</span> Dashboard
                     </h1>

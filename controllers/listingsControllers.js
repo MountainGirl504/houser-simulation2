@@ -17,13 +17,14 @@ module.exports = {
     delete: function (req, res, next) {
         const db = req.app.get('db');
         const { params } = req;
-        console.log(params.id);
+        console.log(params);
 
         db.delete([params.id])
-            .then(() => res.status(200).send('Delete successful!'))
+            .then(() => res.status(200).send('Deleted!'))
             .catch((err) => res.status(500).send(err));
     },
     create: function (req, res, next) {
+        //console.log(req.body)
         const db = req.app.get('db');
         const { property_name
             , property_description

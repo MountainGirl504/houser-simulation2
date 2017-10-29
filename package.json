@@ -15,6 +15,7 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
+    "really-smooth-scroll": "^2.1.1",
     "router": "^1.3.2"
   },
   "scripts": {

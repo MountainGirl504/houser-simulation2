@@ -40,6 +40,7 @@ export default class Auth extends Component{
     login(){
         axios.post('http://localhost:7070/api/users/login', {username: this.state.username, password: this.state.password})
         .then(response => {
+            console.log(response)
             if(response.data.success) {    
                this.setState({
                    loggedIn: true
